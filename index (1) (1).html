@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Summer Delight</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+    body {
+      background-color: #121212;
+      font-family: 'Orbitron', sans-serif;
+      color: #dcdcdc;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+      color: #f0e6d2;
+      text-shadow:
+        0 0 5px #ffe8b3,
+        0 0 10px #d6ad60,
+        0 0 15px #d6ad60;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow:
+          0 0 5px #ffe8b3,
+          0 0 10px #d6ad60,
+          0 0 15px #d6ad60;
+      }
+      to {
+        text-shadow:
+          0 0 10px #ffe8b3,
+          0 0 20px #d6ad60,
+          0 0 30px #d6ad60;
+      }
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #999;
+      margin-bottom: 2.5rem;
+    }
+
+    .player-container {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 1rem;
+      display: inline-block;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    audio {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 0.5rem;
+      filter: drop-shadow(0 0 3px #7fffd4);
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.95rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Summer Delight</h1>
+  <h2>la estación exclusiva para ti, Isolda</h2>
+
+  <div class="player-container">
+    <p>Transmisión de hoy:</p>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg" />
+      Tu navegador no soporta este reproductor de audio.
+    </audio>
+  </div>
+
+  <footer>
+    una canción nueva cada día, estés donde estés
+  </footer>
+</body>
+</html>
