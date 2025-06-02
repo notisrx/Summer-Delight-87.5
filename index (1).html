@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Delight 87.5 FM</title>
+    <style>
+        body {
+            background-color: #0e0e0e;
+            color: #d8d8c0;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-image: radial-gradient(circle at top left, #2a2a2a, #0e0e0e);
+        }
+        .top-note {
+            position: absolute;
+            top: 20px;
+            text-align: center;
+            color: #f4e7c5;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #f5f5f5;
+            text-shadow: 0 0 10px #ccc, 0 0 20px #999;
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #bcbcbc;
+        }
+        audio {
+            width: 80%;
+            max-width: 420px;
+            margin: 20px 0;
+            background-color: #1c1c1c;
+            border: 2px solid #a39e8a;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 0 8px #222;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #777;
+        }
+        .highlight {
+            color: #f4e7c5;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-note">La estación exclusiva para ti, Isolda</div>
+    <h1>Summer Delight <span class="highlight">87.5 FM</span></h1>
+    <p>Una estación creada solo para ti, Isolda</p>
+
+    <audio id="dailyAudio" controls>
+        <source id="audioSource" src="" type="audio/mpeg">
+        Tu navegador no soporta el reproductor de audio.
+    </audio>
+
+    <div class="footer">🎵 Una canción nueva cada día, estés donde estés</div>
+
+    <script>
+        const today = new Date().toISOString().slice(0, 10); // yyyy-mm-dd
+        const filename = today + ".mp3";
+        const audioSource = document.getElementById("audioSource");
+        const audio = document.getElementById("dailyAudio");
+        audioSource.src = filename;
+        audio.load();
+    </script>
+</body>
+</html>
